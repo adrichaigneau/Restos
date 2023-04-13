@@ -1,0 +1,68 @@
+<h2 class="d-flex m-3 justify-content-center">Bienvenue</h2>
+
+<form class="d-flex justify-content-center" role="search">
+  <input
+    (keyup)="suggestion(saisie.value)"
+    class="form-control me-2"
+    type="search"
+    placeholder="Quick Search"
+    aria-label="Search"
+    id="saisie"
+    name="saisie" #saisie>
+</form>
+
+<ul class="list-group" *ngFor="let restaurant of restaurants">
+  <li class="list-group-item">
+    <h5>{{restaurant.nom}}</h5>
+    <h6>{{restaurant.adresse}}</h6>
+    <h6>{{restaurant.tel}}</h6>
+    <h6>{{restaurant.type?.nom}}</h6>
+    <h6>{{restaurant.prix?.categorie}}</h6>
+    <a  class="btn btn-light" [routerLink]="['/restaurant', restaurant.id]">Détails</a>
+  </li>
+</ul>
+
+<button class="btn btn-default" [routerLink]="['/type/', 1]">
+  <i class="fa-solid fa-utensils fa-2xl"></i>
+  <p>Français</p>
+</button>
+
+<button class="btn btn-default" [routerLink]="['/type/', 2]">
+  <i class="fa-solid fa-utensils fa-2xl"></i>
+  <p>Japonais</p>
+</button>
+
+<button class="btn btn-default" [routerLink]="['/type/', 3]">
+  <i class="fa-solid fa-utensils fa-2xl"></i>
+  <p>Coréen</p>
+</button>
+
+<button class="btn btn-default" [routerLink]="['/type/', 4]">
+  <i class="fa-solid fa-utensils fa-2xl"></i>
+  <p>Chinois</p>
+</button>
+
+<button class="btn btn-default" [routerLink]="['/type/', 5]">
+  <i class="fa-solid fa-utensils fa-2xl"></i>
+  <p>Italien</p>
+</button>
+
+<button class="btn btn-default" [routerLink]="['/type/', 6]">
+  <i class="fa-solid fa-utensils fa-2xl"></i>
+  <p>Indien</p>
+</button>
+
+<button class="btn btn-default" [routerLink]="['/type/', 7]">
+  <i class="fa-solid fa-utensils fa-2xl"></i>
+  <p>Libanais</p>
+</button>
+
+<button class="btn btn-default" [routerLink]="['/type/', 8]">
+  <i class="fa-solid fa-utensils fa-2xl"></i>
+  <p>Iranien</p>
+</button>
+
+<button class="btn btn-default" [routerLink]="['/type/', 9]">
+  <i class="fa-solid fa-utensils fa-2xl"></i>
+  <p>Grec</p>
+</button>

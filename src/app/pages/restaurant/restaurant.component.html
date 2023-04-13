@@ -1,0 +1,30 @@
+<section class="d-flex">
+    <article>
+      <div></div>
+    </article>
+</section>
+  
+  <div class="row justify-content-between custom-line m-5">
+  <div class="card col-5" style="width: 20rem;">
+    <img class="card-img-top" src="" alt="Card image cap">
+    <div class="card-body">
+      <h3>{{restaurant.nom}}</h3>
+      <p class="card-text">{{restaurant.adresse}}</p>
+      <p class="card-text">{{restaurant.tel}}</p>
+      <p class="card-text">{{restaurant.type?.nom}}</p>
+      <div *ngIf="restaurant.prix?.categorie == 'e'">
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+      <div *ngIf="restaurant.prix?.categorie == 'ee'">
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+      <div *ngIf="restaurant.prix?.categorie == 'eee'">
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+    </div>
+  </div>
+
+  // + Map Google Maps
