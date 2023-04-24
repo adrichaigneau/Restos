@@ -1,19 +1,16 @@
-- Pages et fonctionnalités à définir
-    cartes par type de nourriture
-    cartes par prix (afficher prix avec icônes plutôt que "e")
-    
-    lien avec google maps
 
-    compte avec favoris
+- Fonctionnalité en plus : restos en fonction de l'arrondissement (carte schématique interactive dans home)
+
+- rédiger CDC projet + refaire UMLs
 
 
-- Formation :
-    git https://openclassrooms.com/fr/courses/7162856-gerez-du-code-avec-git-et-github
-    scrum https://openclassrooms.com/fr/courses/4511226-gerez-votre-projet-avec-une-equipe-scrum
-    agile https://openclassrooms.com/fr/courses/4507926-initiez-vous-a-la-gestion-de-projet-agile
+Formation :
+- [Validée] git https://openclassrooms.com/fr/courses/7162856-gerez-du-code-avec-git-et-github
+- [Validée] agile https://openclassrooms.com/fr/courses/4507926-initiez-vous-a-la-gestion-de-projet-agile
+- scrum https://openclassrooms.com/fr/courses/4511226-gerez-votre-projet-avec-une-equipe-scrum
 
-    css sass https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass
-    animations css https://openclassrooms.com/fr/courses/5919246-creez-des-animations-css-modernes
+- css sass https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass
+- animations css https://openclassrooms.com/fr/courses/5919246-creez-des-animations-css-modernes
 
-    visuels illustrator https://openclassrooms.com/fr/courses/2583216-creez-des-visuels-avec-illustrator
+- react https://openclassrooms.com/fr/courses/7008001-debutez-avec-react 
 

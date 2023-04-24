@@ -6,6 +6,8 @@ export interface Restaurant {
     nom?: string;
     adresse?: string;
     tel?: string;
-    type?: Type
-    prix?: Prix
+    type?: Type;
+    prix?: Prix;
+    maps?: string;
+    arrondissement?: number;
   }

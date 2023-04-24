@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component'
 import { HomeComponent } from './pages/home/home.component';
 import { TypeComponent } from './pages/type/type.component';
+import { RestaurantEditComponent } from './pages/restaurant-edit/restaurant-edit.component';
+import { TypeEditComponent } from './pages/type-edit/type-edit.component';
+import { ArrondissementComponent } from './pages/arrondissement/arrondissement.component';
 
 const routes: Routes = [
   {
@@ -21,9 +24,24 @@ const routes: Routes = [
   },
 
   {
+    path: 'arrondissement/:id',
+    component: ArrondissementComponent
+  },
+
+  {
     path:'',
     redirectTo:'/accueil',
     pathMatch: 'full'
+  },
+
+  {
+    path: 'editresto',
+    component: RestaurantEditComponent
+  },
+
+  {
+    path: 'edittype',
+    component: TypeEditComponent
   }
 
 ]

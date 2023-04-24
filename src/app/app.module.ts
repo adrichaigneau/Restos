@@ -11,7 +11,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TypeComponent } from './pages/type/type.component';
-
+import { GoogleMapsModule } from '@angular/google-maps'
+import { DomSanitizer } from '@angular/platform-browser';
+import { RestaurantEditComponent } from './pages/restaurant-edit/restaurant-edit.component';
+import { TypeEditComponent } from './pages/type-edit/type-edit.component';
+import { ArrondissementComponent } from './pages/arrondissement/arrondissement.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,12 @@ import { TypeComponent } from './pages/type/type.component';
     HomeComponent,
     FooterComponent,
     RestaurantComponent,
-    TypeComponent
+    TypeComponent,
+    AppComponent,
+    RestaurantEditComponent,
+    TypeEditComponent,
+    ArrondissementComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -28,7 +37,7 @@ import { TypeComponent } from './pages/type/type.component';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule,
-    CommonModule
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
