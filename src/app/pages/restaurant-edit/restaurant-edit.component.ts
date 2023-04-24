@@ -55,6 +55,7 @@ export class RestaurantEditComponent {
     else {
       this.restaurantService.post(this.newResto).subscribe((data:Restaurant)=>this.newResto = data);
       this.texte = "Le restaurant a bien été enregistré"
+      console.log(this.newResto)
       return this.texte;
     }
 

@@ -1,3 +1,4 @@
+import { Arrondissement } from "./arrondissement";
 import { Prix } from "./prix";
 import { Type } from "./type";
 
@@ -9,5 +10,5 @@ export interface Restaurant {
     type?: Type;
     prix?: Prix;
     maps?: string;
-    arrondissement?: number;
+    arrondissement?: Arrondissement;
   }

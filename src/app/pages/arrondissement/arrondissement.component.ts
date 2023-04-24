@@ -44,5 +44,4 @@ export class ArrondissementComponent {
     .subscribe((data: Restaurant[])=>this.restaurants = data );
     }
 
-
 }
