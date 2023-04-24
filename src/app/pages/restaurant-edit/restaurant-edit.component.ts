@@ -46,7 +46,7 @@ export class RestaurantEditComponent {
 
     this.newResto.prix = this.prixs.find(pr => pr.id === Number(this.newResto.prix));
 
-    this.newResto.arr = this.arrs.find(ar => ar.id === Number(this.newResto.arr));
+    this.newResto.arrondissement = this.arrs.find(ar => ar.id === Number(this.newResto.arrondissement));
 
     if (this.restoForm.status === "INVALID") {
       this.texte = "Invalide"
