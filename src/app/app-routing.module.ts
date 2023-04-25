@@ -6,6 +6,8 @@ import { TypeComponent } from './pages/type/type.component';
 import { RestaurantEditComponent } from './pages/restaurant-edit/restaurant-edit.component';
 import { TypeEditComponent } from './pages/type-edit/type-edit.component';
 import { ArrondissementComponent } from './pages/arrondissement/arrondissement.component';
+import { TypesComponent } from './pages/types/types.component';
+import { CarteComponent } from './pages/carte/carte.component';
 
 const routes: Routes = [
   {
@@ -42,6 +44,16 @@ const routes: Routes = [
   {
     path: 'edittype',
     component: TypeEditComponent
+  },
+
+  {
+    path: 'types',
+    component: TypesComponent
+  },
+
+  {
+    path: 'carte',
+    component: CarteComponent
   }
 
 ]

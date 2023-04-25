@@ -1,60 +1,67 @@
+<h4 class="d-flex m-3 justify-content-center text mt-3">Restaurants {{type.nom}} dans Paris</h4>
+
+
 <div class="container">
   <div class="row">
-    <form class="d-flex justify-content-center mt-4 col barre" role="search">
-      <input (keyup)="suggestion(saisie.value)" class="form-control me-2 w-50 rounded-pill " type="search"
+    <form class="d-flex justify-content-center mt-4 align-self-start col-7 col-lg-7 barre" role="search">
+      <input (keyup)="suggestion(saisie.value)" class="form-control rounded-pill " type="search"
         placeholder="Recherchez un restaurant par son nom" aria-label="Search" id="saisie" name="saisie" #saisie>
-      <div class="col">
-        <span class="text textlight">
-        Filtrer par prix
-      </span>
-     
-        <div class="form-check col" *ngFor="let prix of prixs">
-          <input (click)="filtre(saisie.value, price.value)" class="form-check-input" type="radio" id="prix_{{prix.categorie}}" name="price" #price [value]="prix.categorie">
-          <label class="form-check-label" for="prix_{{prix.categorie}}">
-            <div *ngIf="prix.categorie == 'e'">
-              <i class="fa-solid fa-euro-sign"></i>
-            </div>
-            <div *ngIf="prix.categorie == 'ee'">
-              <i class="fa-solid fa-euro-sign"></i>
-              <i class="fa-solid fa-euro-sign"></i>
-            </div>
-            <div *ngIf="prix.categorie == 'eee'">
-              <i class="fa-solid fa-euro-sign"></i>
-              <i class="fa-solid fa-euro-sign"></i>
-              <i class="fa-solid fa-euro-sign"></i>
-            </div>
-          </label>
-        </div>
-      </div>
+      <a class="btn btn-light text rounded col-5 col-sm-4" (click)="suggestion('')">Afficher tous les restaurants</a>
     </form>
+  </div>
+  <div class="col mt-3 ">
+    <span class="text textlight">
+      Filtrer par prix
+    </span>
+  </div>
+  <div class="form-check col" *ngFor="let prix of prixs">
+    <input (click)="filtre(saisie.value, price.value)" class="form-check-input" type="radio"
+      id="prix_{{prix.categorie}}" name="price" #price [value]="prix.categorie">
+    <label class="form-check-label" for="prix_{{prix.categorie}}">
+      <div *ngIf="prix.categorie == 'e'">
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+      <div *ngIf="prix.categorie == 'ee'">
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+      <div *ngIf="prix.categorie == 'eee'">
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+    </label>
   </div>
 </div>
 
-<ul class="list-group" *ngFor="let restaurant of restaurants">
+<ul class="list-group col" *ngFor="let restaurant of restaurants">
   <li class="list-group-item rounded-0">
     <span>
       <h5>{{restaurant.nom}}</h5>
     </span>
     <span>
-      <i class="fa-solid fa-location-dot"></i><h6>{{restaurant.adresse}}</h6>
+      <i class="fa-solid fa-location-dot"></i>
+      <h6>{{restaurant.adresse}}</h6>
     </span>
     <span>
-      <i class="fa-solid fa-phone"></i><h6>{{restaurant.tel}}</h6>
+      <i class="fa-solid fa-phone"></i>
+      <h6>{{restaurant.tel}}</h6>
     </span>
     <span>
-      <i class="fa-solid fa-bowl-food"></i><h6>{{restaurant.type?.nom}}</h6>
-    <div *ngIf="restaurant.prix?.categorie == 'e'">
-      <i class="fa-solid fa-euro-sign"></i>
-    </div>
-    <div *ngIf="restaurant.prix?.categorie == 'ee'">
-      <i class="fa-solid fa-euro-sign"></i>
-      <i class="fa-solid fa-euro-sign"></i>
-    </div>
-    <div *ngIf="restaurant.prix?.categorie == 'eee'">
-      <i class="fa-solid fa-euro-sign"></i>
-      <i class="fa-solid fa-euro-sign"></i>
-      <i class="fa-solid fa-euro-sign"></i>
-    </div>
+      <i class="fa-solid fa-bowl-food"></i>
+      <h6>{{restaurant.type?.nom}}</h6>
+      <div *ngIf="restaurant.prix?.categorie == 'e'">
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+      <div *ngIf="restaurant.prix?.categorie == 'ee'">
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+      <div *ngIf="restaurant.prix?.categorie == 'eee'">
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
     </span>
     <a class="btn btn-light text rounded-0" [routerLink]="['/restaurant', restaurant.id]">Détails</a>
   </li>

@@ -1,0 +1,16 @@
+.carte {
+  $image-width: 400px;
+  $image-height: 285px;
+  $frame-width: 5px;
+  $frame-color: #000000;
+
+    background-color: $frame-color;
+    padding: $frame-width;
+
+    img {
+
+      object-fit: cover;
+      border: 1px solid $frame-color;
+    }
+
+}

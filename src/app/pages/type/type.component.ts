@@ -35,7 +35,7 @@ export class TypeComponent implements OnInit {
     .suggestion(this.nomType, saisie)
     .subscribe((data: Restaurant[])=>this.restaurants = data );
     }
-  
+
   filtre(saisie: string, prix: string) {
     this.nomType = this.type?.nom;
     this.restaurantService

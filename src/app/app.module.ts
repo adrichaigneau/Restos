@@ -16,6 +16,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { RestaurantEditComponent } from './pages/restaurant-edit/restaurant-edit.component';
 import { TypeEditComponent } from './pages/type-edit/type-edit.component';
 import { ArrondissementComponent } from './pages/arrondissement/arrondissement.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { CarteComponent } from './pages/carte/carte.component';
+import { TypesComponent } from './pages/types/types.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +31,10 @@ import { ArrondissementComponent } from './pages/arrondissement/arrondissement.c
     AppComponent,
     RestaurantEditComponent,
     TypeEditComponent,
-    ArrondissementComponent
-    
+    ArrondissementComponent,
+    CarteComponent,
+    TypesComponent
+
   ],
   imports: [
     BrowserModule,
@@ -38,6 +43,7 @@ import { ArrondissementComponent } from './pages/arrondissement/arrondissement.c
     ReactiveFormsModule,
     RouterModule,
     CommonModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]
