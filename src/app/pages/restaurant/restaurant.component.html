@@ -6,7 +6,7 @@
 
 <div class="container mt-4">
   <div class="row">
-    <div class="col justify-content-between custom-line m-5">
+    <div class="col align-self-start m-5">
       <div class="card col-5" style="width: 20rem;">
         <div class="card-body">
           <h3>{{restaurant.nom}}</h3>
@@ -25,11 +25,24 @@
             <i class="fa-solid fa-euro-sign"></i>
             <i class="fa-solid fa-euro-sign"></i>
           </div>
+          <a class="btn btn-light text rounded-0 mt-3" [routerLink]="['/avisedit', restaurant.id]">Laisser un avis</a>
         </div>
       </div>
-
-      <iframe class="col" [src]="map" width="600" height="450" style="border:0;"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <div class="card text-bg-dark mb-3 mt-3" style="max-width: 18rem;" *ngFor="let a of avis">
+        <div class="card-header">{{a.theme?.nom}}</div>
+        <div class="card-body">
+          <h5 class="card-title">Par {{a.surnom}} </h5>
+          <p class="card-text">"{{a.texte}}"</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+
+
+<!--</div>
+      <iframe class="col" [src]="map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>-->

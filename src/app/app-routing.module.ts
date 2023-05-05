@@ -8,6 +8,7 @@ import { TypeEditComponent } from './pages/type-edit/type-edit.component';
 import { ArrondissementComponent } from './pages/arrondissement/arrondissement.component';
 import { TypesComponent } from './pages/types/types.component';
 import { CarteComponent } from './pages/carte/carte.component';
+import { AvisEditComponent } from './pages/avis-edit/avis-edit.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,11 @@ const routes: Routes = [
   {
     path: 'carte',
     component: CarteComponent
+  },
+
+  {
+    path: 'avisedit/:id',
+    component: AvisEditComponent
   }
 
 ]

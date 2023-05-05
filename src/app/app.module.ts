@@ -19,6 +19,8 @@ import { ArrondissementComponent } from './pages/arrondissement/arrondissement.c
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { CarteComponent } from './pages/carte/carte.component';
 import { TypesComponent } from './pages/types/types.component';
+import { AvisComponent } from './pages/avis/avis.component';
+import { AvisEditComponent } from './pages/avis-edit/avis-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { TypesComponent } from './pages/types/types.component';
     TypeEditComponent,
     ArrondissementComponent,
     CarteComponent,
-    TypesComponent
+    TypesComponent,
+    AvisComponent,
+    AvisEditComponent
 
   ],
   imports: [
