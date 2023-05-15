@@ -30,9 +30,11 @@ create table restaurant(
 
 /////////////////
 
-insert into type (nom) values ('francais'), ('japonais'), ('coreen'), ('chinois'), ('italien'), ('indien'), ('libanais'), ('iranien'), ('grec');
+insert into type (nom) values ('Francais'), ('Japonais'), ('Coreen'), ('Chinois'), ('Italien'), ('Indien'), ('Libanais'), ('Iranien'), ('Grec');
 
 insert into prix (categorie) values ('e'), ('ee'), ('eee');
+
+insert into arrondissement (numero) values (1), (2), (3), (4), (5), (6), (7), (8), (9), (10), (11), (12), (13), (14), (15), (16), (17), (18), (19), (20);
 
 insert into restaurant (nom, adresse, tel, id_type, id_prix, maps)
 values (
