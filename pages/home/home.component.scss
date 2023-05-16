@@ -1,0 +1,15 @@
+
+ul {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-default {
+    transition-property: transform;
+    transition-duration: 200ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+

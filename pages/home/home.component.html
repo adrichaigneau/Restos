@@ -1,0 +1,34 @@
+<h2 class="d-flex m-3 justify-content-center text">Bienvenue</h2>
+<h6 class="d-flex m-3 justify-content-center text">Recherchez ici rapidement un restaurant par son nom</h6>
+
+
+<form class="d-flex justify-content-center barre" role="search">
+  <input (keyup)="suggestion(saisie.value)" class="form-control me-2 rounded-pill w-50" type="search"
+    placeholder="Quick Search" aria-label="Search" id="saisie" name="saisie" #saisie>
+</form>
+
+<ul class="list-group" *ngFor="let restaurant of restaurants">
+  <li class="list-group-item rounded-0">
+    <span>
+      <h5>{{restaurant.nom}}</h5>
+      <h6 *ngIf="restaurant.type?.nom === 'Francais'; else elseBlock1"> <i class="fa-solid fa-bowl-food"></i> &nbsp; Français</h6>
+      <ng-template #elseBlock1>
+        <h6 *ngIf="restaurant.type?.nom === 'Coreen'; else elseBlock2"> <i class="fa-solid fa-bowl-food"></i> &nbsp; Coréen</h6>
+        <ng-template #elseBlock2> <i class="fa-solid fa-bowl-food"></i> &nbsp;  {{restaurant.type?.nom}}</ng-template>
+      </ng-template>
+      <div *ngIf="restaurant.prix?.categorie == 'e'">
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+      <div *ngIf="restaurant.prix?.categorie == 'ee'">
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+      <div *ngIf="restaurant.prix?.categorie == 'eee'">
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+        <i class="fa-solid fa-euro-sign"></i>
+      </div>
+    </span>
+    <a class="btn btn-light text rounded-0" [routerLink]="['/restaurant', restaurant.id]">Détails</a>
+  </li>
+</ul>

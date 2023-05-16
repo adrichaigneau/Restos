@@ -1,0 +1,12 @@
+.carte {
+  $image-width: 400px;
+  $image-height: 285px;
+  $frame-width: 5px;
+
+    img {
+
+      object-fit: cover;
+
+    }
+
+}
