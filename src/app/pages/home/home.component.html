@@ -11,18 +11,11 @@
   <li class="list-group-item rounded-0">
     <span>
       <h5>{{restaurant.nom}}</h5>
-    </span>
-    <span>
-      <i class="fa-solid fa-location-dot"></i>
-      <h6>{{restaurant.adresse}}</h6>
-    </span>
-    <span>
-      <i class="fa-solid fa-phone"></i>
-      <h6>{{restaurant.tel}}</h6>
-    </span>
-    <span>
-      <i class="fa-solid fa-bowl-food"></i>
-      <h6>{{restaurant.type?.nom}}</h6>
+      <h6 *ngIf="restaurant.type?.nom === 'Francais'; else elseBlock1"> <i class="fa-solid fa-bowl-food"></i> &nbsp; Français</h6>
+      <ng-template #elseBlock1>
+        <h6 *ngIf="restaurant.type?.nom === 'Coreen'; else elseBlock2"> <i class="fa-solid fa-bowl-food"></i> &nbsp; Coréen</h6>
+        <ng-template #elseBlock2> <i class="fa-solid fa-bowl-food"></i> &nbsp;  {{restaurant.type?.nom}}</ng-template>
+      </ng-template>
       <div *ngIf="restaurant.prix?.categorie == 'e'">
         <i class="fa-solid fa-euro-sign"></i>
       </div>

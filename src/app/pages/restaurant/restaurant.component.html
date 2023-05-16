@@ -9,10 +9,23 @@
     <div class="col align-self-start m-5">
       <div class="card col-5" style="width: 20rem;">
         <div class="card-body">
-          <h3>{{restaurant.nom}}</h3>
-          <p class="card-text">{{restaurant.adresse}}</p>
-          <p class="card-text">{{restaurant.tel}}</p>
-          <p class="card-text">{{restaurant.type?.nom}}</p>
+          <h5 class="card-title">
+            {{restaurant.nom}}
+          </h5>
+          <p class="card-text">
+          <h3 *ngIf="restaurant.type?.nom === 'Francais'; else elseBlock"> <i class="fa-solid fa-bowl-food"></i> &nbsp; Français</h3>
+          <ng-template #elseBlock>
+            <h3 *ngIf="restaurant.type?.nom === 'Coreen'; else elseBlock"> <i class="fa-solid fa-bowl-food"></i> &nbsp; Coréen</h3>
+            <ng-template #elseBlock> <i class="fa-solid fa-bowl-food"></i> &nbsp; {{restaurant.type?.nom}}</ng-template>
+          </ng-template>
+          <div>
+            <i class="fa-sharp fa-solid fa-location-dot"></i> &nbsp;
+            {{restaurant.adresse}}
+          </div>
+          <div>
+            <i class="fa-solid fa-phone"></i> &nbsp;
+            {{restaurant.tel}}
+          </div>
           <div *ngIf="restaurant.prix?.categorie == 'e'">
             <i class="fa-solid fa-euro-sign"></i>
           </div>

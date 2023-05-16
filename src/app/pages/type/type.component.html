@@ -1,4 +1,14 @@
-<h4 class="d-flex m-3 justify-content-center text mt-3">Restaurants {{type.nom}} dans Paris</h4>
+<span class="d-flex m-3 justify-content-center text mt-3">
+  <h4>Restaurants&nbsp;</h4>
+  <h4 *ngIf="type.nom === 'Francais'; else elseBlock1">français</h4>
+  <ng-template #elseBlock1>
+    <h4 *ngIf="type.nom === 'Coreen'; else elseBlock2">coréens</h4>
+    <ng-template #elseBlock2>
+      <h4>{{type.nom}}</h4>
+    </ng-template>
+  </ng-template>
+  <h4>&nbsp;dans Paris</h4>
+</span>
 
 
 <div class="container">
@@ -11,6 +21,7 @@
   </div>
   <div class="col mt-3 ">
     <span class="text textlight">
+
       Filtrer par prix
     </span>
   </div>
@@ -40,16 +51,12 @@
       <h5>{{restaurant.nom}}</h5>
     </span>
     <span>
-      <i class="fa-solid fa-location-dot"></i>
-      <h6>{{restaurant.adresse}}</h6>
-    </span>
-    <span>
-      <i class="fa-solid fa-phone"></i>
-      <h6>{{restaurant.tel}}</h6>
-    </span>
-    <span>
       <i class="fa-solid fa-bowl-food"></i>
-      <h6>{{restaurant.type?.nom}}</h6>
+      <h6 *ngIf="restaurant.type?.nom === 'Francais'; else elseBlock1">Français</h6>
+      <ng-template #elseBlock1>
+        <h6 *ngIf="restaurant.type?.nom === 'Coreen'; else elseBlock2">Coréen</h6>
+        <ng-template #elseBlock2>{{restaurant.type?.nom}}</ng-template>
+      </ng-template>
       <div *ngIf="restaurant.prix?.categorie == 'e'">
         <i class="fa-solid fa-euro-sign"></i>
       </div>
