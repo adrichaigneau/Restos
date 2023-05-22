@@ -19,15 +19,14 @@ Elle pourrait aussi afficher une carte Google Maps pour visualiser la localisati
 4. Comment installer et exécuter le projet
 
 Pour lancer l'application :
-- Lancer MySQL/MariaDB
+- Lancer MySQL
 - Exécuter les lignes de code du fichier SQLResto.sql pour créer la BDD, les tables, et insérer des valeurs dans les tables
 - Créer un dossier dans votre environnement de travail pour accueillir le back
-- Run l'application Java Spring depuis IntelliJ par exemple
+- Run l'application Java Spring depuis un IDE comme IntelliJ
 - Créer un dossier dans votre environnement de travail pour accueillir le front
-- Run le front dans VSCode par exemple, en ouvrant Git Bash dans le dossier front, puis exécuter la commande "npm start"
+- Run le front dans un IDE comme VSCode, en ouvrant Git Bash dans le dossier front, puis exécuter la commande "npm start"
 - Aller à l'adresse http://localhost:4200 sur votre navigateur
 
 5. Comment utiliser le projet
 
 L'application est intuitive d'utilisation, mais vous pouvez vous référer au guide d'utilisation si besoin.
-
